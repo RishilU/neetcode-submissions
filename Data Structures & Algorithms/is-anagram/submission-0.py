@@ -1,0 +1,16 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+        hashmap_s = {};
+        hashmap_t = {};
+
+        for char in s:
+         hashmap_s[char] = hashmap_s.get(char, 0) + 1  # COUNT ALL
+
+        for char in t:
+         hashmap_t[char] = hashmap_t.get(char, 0) + 1  # COUNT ALL
+
+        return hashmap_s == hashmap_t  # COMPARE BOTH 
+
+        
+
